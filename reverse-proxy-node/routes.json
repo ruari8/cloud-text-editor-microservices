@@ -1,0 +1,10 @@
+{
+  "/wordcount": "http://192.168.0.100:8080/",
+  "/charcount": "http://192.168.0.100:8081/",
+  "/rewrite": "http://192.168.0.100:8082/rewrite",
+  "/frequency": "http://192.168.0.100:8083/frequency",
+  "/average": "http://192.168.0.100:8084/analyze",
+  "/FindReplace/replace": "http://192.168.0.100:8085/FindReplace/replace",
+  "/save": "http://192.168.0.100:4000/save",
+  "/load": "http://192.168.0.100:4000/load"
+}

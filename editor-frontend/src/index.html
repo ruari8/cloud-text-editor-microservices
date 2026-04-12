@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUBeditotron3000</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="editor" class="editor-container">
+    <h1 id="logo" class="logo">QUBeditotron3000</h1>
+
+    <textarea id="editor-textarea" class="editor-input" aria-label="Text editor input area">It was the best of cloud, it was the worst of cloud...</textarea>
+
+    <div class="button-row">
+        <button id="wordcount-btn" class="control-btn">Word Count</button>
+        <button id="charcount-btn" class="control-btn">Character Count</button>
+    </div>
+
+    <div class="button-row">
+        <div class="rewrite-container">
+            <button id="rewrite-btn" class="control-btn">Rewrite Text</button>
+            <div id="style-dropdown" class="dropdown-content">
+                <button class="style-option">Shakespeare</button>
+                <button class="style-option">Chav</button>
+                <button class="style-option">Tech Bro</button>
+            </div>
+        </div>
+        <button id="frequency-btn" class="control-btn">Word Frequency</button>
+    </div>
+
+    <div class="button-row">
+        <button id="wordlength-btn" class="control-btn">Average Word Length</button>
+        <div class="findreplace-container">
+            <button id="findreplace-btn" class="control-btn">Find/Replace</button>
+            <div class="findreplace-inputs">
+                <input type="text" id="find-input" placeholder="Find text..." />
+                <input type="text" id="replace-input" placeholder="Replace with..." />
+            </div>
+        </div>
+    </div>
+
+    <div class="button-row">
+        <button id="save-btn" class="control-btn">Save Text</button>
+        <div class="load-container">
+            <button id="load-btn" class="control-btn">Load Text</button>
+            <div class="load-inputs">
+                <input type="text" id="load-id" placeholder="Enter saved text ID" />
+            </div>
+        </div>
+    </div>
+
+    <div id="results-container" class="results-container" aria-live="polite">
+        <!-- Results will appear here -->
+    </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

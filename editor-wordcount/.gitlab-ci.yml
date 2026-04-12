@@ -1,0 +1,9 @@
+image: php:7.4
+
+test:app:
+  script:
+    - php src/tests/unit_tests.php
+    - php -S localhost:80 src/index.php &
+    # Give server time to start
+    - sleep 2
+    - php src/tests/integration_tests.php

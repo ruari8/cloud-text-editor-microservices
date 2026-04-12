@@ -1,0 +1,6 @@
+@FindReplaceService_HostAddress = http://localhost:5052
+
+GET {{FindReplaceService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

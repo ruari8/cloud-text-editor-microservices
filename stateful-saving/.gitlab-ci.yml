@@ -1,0 +1,10 @@
+image: node:18
+
+stages:
+  - test
+
+test:
+  stage: test
+  script:
+    - npm ci
+    - npm test

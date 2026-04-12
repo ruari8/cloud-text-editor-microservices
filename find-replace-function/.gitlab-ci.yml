@@ -1,0 +1,32 @@
+image: mcr.microsoft.com/dotnet/sdk:9.0
+
+stages:
+  - build
+  - test
+
+build:
+  stage: build
+  script:
+    - dotnet restore FindReplaceService/FindReplaceService.csproj
+    - dotnet build FindReplaceService/FindReplaceService.csproj --no-restore
+  artifacts:
+    paths:
+      - FindReplaceService/bin/
+      - FindReplaceService/obj/
+    expire_in: 1 hour
+
+unit_tests:
+  stage: test
+  needs: [build]
+  script:
+    - dotnet test FindReplaceService.Tests/FindReplaceService.Tests.csproj --no-restore
+  dependencies:
+    - build                       
+
+integration_tests:
+  stage: test
+  needs: [build]                  
+  script:
+    - dotnet test FindReplaceService.IntegrationTests/FindReplaceService.IntegrationTests.csproj --no-restore
+  dependencies:
+    - build                       

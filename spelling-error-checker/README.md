@@ -1,0 +1,2 @@
+## Licensing and Acknowledgment
+This project uses the Hunspell dictionary files (`en_US.dic`) from the LibreOffice Dictionaries Repository, licensed under the Mozilla Public License 2.0. For more details, see the LICENSE file.

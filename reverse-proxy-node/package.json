@@ -1,0 +1,13 @@
+{
+  "name": "reverse-proxy-3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "author": "Ruari",
+  "description": "reverse-proxy",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
